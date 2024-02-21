@@ -1,2 +1,2 @@
-export * from "./DashBoardHeader";
-export { default } from "./DashBoardHeader";
+export * from "./DashboardHeader";
+export { default } from "./DashboardHeader";
