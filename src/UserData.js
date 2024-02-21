@@ -1,0 +1,441 @@
+import {
+  OnlineIcon,
+  IdleIcon,
+  DonotdisturbIcon,
+  InvisibleIcon,
+} from "./StatusIcons";
+
+import user1 from "./../public/assets/profilepictures/user-5.png";
+import user2 from "./../public/assets/profilepictures/user-2.jpg";
+import user3 from "./../public/assets/profilepictures/user-3.png";
+import user4 from "./../public/assets/profilepictures/user-4.webp";
+import user5 from "./../public/assets/profilepictures/user-1.jpg";
+import user6 from "./../public/assets/profilepictures/user-6.jpg";
+import user7 from "./../public/assets/profilepictures/user-7.jpg";
+import user8 from "./../public/assets/profilepictures/user-8.webp";
+import user9 from "./../public/assets/profilepictures/user-9.jpg";
+import user10 from "./../public/assets/profilepictures/user-10.jpg";
+import user11 from "./../public/assets/profilepictures/user-11.jpg";
+import user12 from "./../public/assets/profilepictures/user-12.jpg";
+import user13 from "./../public/assets/profilepictures/user-13.jpg";
+import user14 from "./../public/assets/profilepictures/user-14.jpg";
+import user15 from "./../public/assets/profilepictures/user-15.jpg";
+import user16 from "./../public/assets/profilepictures/user-16.webp";
+import user17 from "./../public/assets/profilepictures/user-17.jpg";
+import user18 from "./../public/assets/profilepictures/user-18.jpg";
+import user19 from "./../public/assets/profilepictures/user-19.jpg";
+import user20 from "./../public/assets/profilepictures/user-20.webp";
+import user21 from "./../public/assets/profilepictures/user-21.webp";
+import user22 from "./../public/assets/profilepictures/user-22.jpg";
+import user23 from "./../public/assets/profilepictures/user-23.jpg";
+import user24 from "./../public/assets/profilepictures/user-24.webp";
+import user25 from "./../public/assets/profilepictures/user-25.webp";
+import BuriBuriZimon from "./../public/assets/profilepictures/BuriBuriZimon.jpg";
+import BananaShake from "./../public/assets/profilepictures/BananaShake.jpeg";
+import myProfilePic from "./../public/assets/userprofilepic/myProfilePic.jpg";
+
+// Dummy Data
+const users = [
+  {
+    username: "MoonlightDancer",
+    id: 1,
+    image: user1,
+    status: OnlineIcon,
+    userstatus: "Embrace the journey, overcome challenges",
+    statusText: "Online",
+  },
+  {
+    username: "WillowOnFire",
+    id: 2,
+    image: user2,
+    status: DonotdisturbIcon,
+    statusText: "Do not disturb",
+    userstatus: "Believe in yourself; magic happens",
+  },
+  {
+    username: "SilverBlade99",
+    id: 3,
+    image: user3,
+    status: IdleIcon,
+    statusText: "Idle",
+    userstatus: "Seize the day, own the moment",
+  },
+  {
+    username: "EchoMysterio",
+    id: 4,
+    image: user4,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "You are unstoppable, not optional",
+  },
+  {
+    username: "SlickOctoBoss",
+    id: 5,
+    image: user5,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Dream big, work hard, stay focused",
+  },
+  {
+    username: "VintageVibes",
+    id: 6,
+    image: user6,
+    status: OnlineIcon,
+    statusText: "Online",
+    userstatus: "Sparkle with effort, shine with success",
+  },
+  {
+    username: "HarmonyInTheDark",
+    id: 7,
+    image: user7,
+    status: IdleIcon,
+    statusText: "Idle",
+    userstatus: "Bold actions, big results, no regrets",
+  },
+  {
+    username: "VoyagerSupreme",
+    id: 8,
+    image: user8,
+    status: IdleIcon,
+    statusText: "Idle",
+    userstatus: "Stay positive, work hard, make it happen",
+  },
+  {
+    username: "Rainmaker5000",
+    id: 9,
+    image: user9,
+    status: DonotdisturbIcon,
+    statusText: "Do not disturb",
+    userstatus: "Create the life you can't wait to wake up to",
+  },
+  {
+    username: "PathfinderElite",
+    id: 10,
+    image: user10,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Dream it Wish it Do it",
+  },
+  {
+    username: "DreamweaverXO",
+    id: 11,
+    image: user11,
+    status: IdleIcon,
+    statusText: "Idle",
+    userstatus: "Strive for progress, not perfection",
+  },
+  {
+    username: "AmberSunsetXO",
+    id: 12,
+    image: user12,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Be the change you wish to see",
+  },
+  {
+    username: "CrimsonKnight",
+    id: 13,
+    image: user13,
+    status: OnlineIcon,
+    statusText: "Online",
+    userstatus: "Today's actions shape tomorrow's success",
+  },
+  {
+    username: "EmeraldEnigma",
+    id: 14,
+    image: user14,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Chase your dreams, not perfection",
+  },
+  {
+    username: "SapphireSiren",
+    id: 15,
+    image: user15,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Believe Achieve Succeed",
+  },
+  {
+    username: "SkyGuardian",
+    id: 16,
+    image: user16,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Make today amazing",
+  },
+  {
+    username: "MoonlightMystic",
+    id: 17,
+    image: user17,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Stay hungry, stay foolish - Steve Jobs",
+  },
+  {
+    username: "QuokkaQueen",
+    id: 18,
+    image: user18,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Your vibe attracts your tribe",
+  },
+  {
+    username: "ZebraZest",
+    id: 19,
+    image: user19,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Success is a journey, not a destination",
+  },
+  {
+    username: "CrowNocturne",
+    id: 20,
+    image: user20,
+    status: IdleIcon,
+    statusText: "Idle",
+    userstatus: "Dare to be different",
+  },
+  {
+    username: "BookishBadGirl",
+    id: 21,
+    image: user21,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Find joy in the journey",
+  },
+  {
+    username: "DandelionDreams",
+    id: 22,
+    image: user22,
+    status: OnlineIcon,
+    statusText: "Online",
+    userstatus: "Be a voice, not an echo",
+  },
+  {
+    username: "TempestTakeover",
+    id: 23,
+    image: user23,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Leap and the net will appear",
+  },
+  {
+    username: "LucidLuminescence",
+    id: 24,
+    image: user24,
+    status: IdleIcon,
+    statusText: "Idle",
+    userstatus: "Stars can't shine without darkness",
+  },
+  {
+    username: "MidnightMystique",
+    id: 25,
+    image: user25,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Create your sunshine",
+  },
+  {
+    username: "SparklePuppy",
+    id: 26,
+    image: user1,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Dream big, work hard, stay focused",
+  },
+  {
+    username: "JellyBeanJumper",
+    id: 27,
+    image: user2,
+    status: DonotdisturbIcon,
+    statusText: "Do not disturb",
+    userstatus: "Believe in yourself; magic happens",
+  },
+  {
+    username: "RainbowRocket",
+    id: 28,
+    image: user3,
+    status: IdleIcon,
+    statusText: "Idle",
+    userstatus: "Seize the day, own the moment",
+  },
+  {
+    username: "BuzzyBumblebee",
+    id: 29,
+    image: user4,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "You are unstoppable, not optional",
+  },
+  {
+    username: "CupcakeCloud",
+    id: 30,
+    image: user5,
+    status: InvisibleIcon,
+    userstatus: "Embrace the journey, overcome challenges",
+    statusText: "Offline",
+  },
+  {
+    username: "TwinkleTwirl",
+    id: 31,
+    image: user6,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Sparkle with effort, shine with success",
+  },
+  {
+    username: "DinoDoodle",
+    id: 32,
+    image: user7,
+    status: IdleIcon,
+    statusText: "Idle",
+    userstatus: "Bold actions, big results, no regrets",
+  },
+  {
+    username: "GigglyGiraffe",
+    id: 33,
+    image: user8,
+    status: IdleIcon,
+    statusText: "Idle",
+    userstatus: "Stay positive, work hard, make it happen",
+  },
+  {
+    username: "BubbleBug",
+    id: 34,
+    image: user9,
+    status: DonotdisturbIcon,
+    statusText: "Do not disturb",
+    userstatus: "Create the life you can't wait to wake up to",
+  },
+  {
+    username: "MarshmallowMischief",
+    id: 35,
+    image: user10,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Dream it Wish it Do it",
+  },
+  {
+    username: "SnuggleSnail",
+    id: 36,
+    image: user11,
+    status: IdleIcon,
+    statusText: "Idle",
+    userstatus: "Strive for progress, not perfection",
+  },
+  {
+    username: "SunnySquiggle",
+    id: 37,
+    image: user12,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Be the change you wish to see",
+  },
+  {
+    username: "CookieCuddle",
+    id: 38,
+    image: user25,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Create your sunshine",
+  },
+  {
+    username: "LollipopLion",
+    id: 39,
+    image: user13,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Today's actions shape tomorrow's success",
+  },
+  {
+    username: "TeddyTwirl",
+    id: 40,
+    image: user14,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Chase your dreams, not perfection",
+  },
+  {
+    username: "PuddlePenguin",
+    id: 41,
+    image: user15,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Believe Achieve Succeed",
+  },
+  {
+    username: "FlutterFroggy",
+    id: 42,
+    image: user16,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Make today amazing",
+  },
+  {
+    username: "SlinkySquirrel",
+    id: 43,
+    image: user17,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Stay hungry, stay foolish - Steve Jobs",
+  },
+  {
+    username: "PuffyPanda",
+    id: 44,
+    image: user18,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Your vibe attracts your tribe",
+  },
+  {
+    username: "JollyJellyfish",
+    id: 45,
+    image: user19,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Success is a journey, not a destination",
+  },
+  {
+    username: "CheeryCherub",
+    id: 46,
+    image: user20,
+    status: IdleIcon,
+    statusText: "Idle",
+    userstatus: "Dare to be different",
+  },
+  {
+    username: "CozyCaterpillar",
+    id: 47,
+    image: user21,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Find joy in the journey",
+  },
+  {
+    username: "BouncingBanana",
+    id: 48,
+    image: user22,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Be a voice, not an echo",
+  },
+  {
+    username: "WigglyWhale",
+    id: 49,
+    image: user23,
+    status: InvisibleIcon,
+    statusText: "Offline",
+    userstatus: "Leap and the net will appear",
+  },
+  {
+    username: "SprinkleSprite",
+    id: 50,
+    image: user24,
+    status: IdleIcon,
+    statusText: "Idle",
+    userstatus: "Stars can't shine without darkness",
+  },
+];
+
+export { users, BuriBuriZimon, BananaShake, myProfilePic };
