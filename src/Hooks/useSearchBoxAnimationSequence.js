@@ -49,7 +49,10 @@ function useSearchBoxAnimationSequence(
           }
         );
         OptionInitalState.set(false);
-        delayExitValue.set({ height: 0 });
+        delayExitValue.set({
+          height: 0,
+          transition: { type: "tween", ease: "easeOut" },
+        });
       } else if (
         flow.current === "from Other options to searchOption" ||
         isDeleteHistory.current === true ||
@@ -58,14 +61,18 @@ function useSearchBoxAnimationSequence(
         SearchOptionControl.start(false);
         flow.current = "from searchBox to searchOption";
         OptionInitalState.set(false);
+        // delayExitValue.set({
+        //   height: 0,
+        //   transition: {
+        //     type: "spring",
+        //     duration: 0.8,
+        //     bounce: 0.2,
+        //     delay: 0.3,
+        //   },
+        // });
         delayExitValue.set({
           height: 0,
-          transition: {
-            type: "spring",
-            duration: 0.8,
-            bounce: 0.2,
-            delay: 0.3,
-          },
+          transition: { type: "tween", ease: "easeOut", delay: 0.3 },
         });
         isDeleteHistory.current = false;
       }

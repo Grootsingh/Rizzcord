@@ -309,7 +309,7 @@ export default function SearchBox() {
               initial={OptionInitalState.get()}
               animate={{ height: "auto" }}
               transition={{ type: "spring", duration: 0.8, bounce: 0.2 }}
-              exit={{ height: 0 }}
+              exit={delayExitValue.get()}
               className="w-[320px] overflow-hidden  searchbox-popup-position rounded bg-theme-Slate-300"
             >
               <SearchUser
@@ -330,7 +330,7 @@ export default function SearchBox() {
               initial={OptionInitalState.get()}
               animate={{ height: "auto" }}
               transition={{ type: "spring", duration: 0.8, bounce: 0.2 }}
-              exit={{ height: 0 }}
+              exit={delayExitValue.get()}
               className="w-[320px] overflow-hidden  searchbox-popup-position rounded bg-theme-Slate-300"
             >
               <SearchUser
@@ -369,7 +369,7 @@ export default function SearchBox() {
               initial={OptionInitalState.get()}
               animate={{ height: "auto" }}
               transition={{ type: "spring", duration: 0.8, bounce: 0.2 }}
-              exit={{ height: 0 }}
+              exit={delayExitValue.get()}
               className="w-[320px] overflow-hidden  searchbox-popup-position rounded bg-theme-Slate-300"
             >
               <SearchPinned
