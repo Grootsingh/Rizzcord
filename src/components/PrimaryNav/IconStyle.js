@@ -1,25 +1,40 @@
+"use client";
 import React from "react";
 import ToolTip from "../ToolTip";
 import { classNames } from "@/utils";
+import { motion } from "framer-motion";
 
 function IconStyle({ children, varient, text = "" }) {
-  
+  const [isClicked, setClicked] = React.useState(false);
+
   return (
     <>
       <div className="relative ">
         <HoverBar text={text} />
         <ToolTip direction={"Left"} text={text} size={"Big"}>
-          <div
-            className={classNames(
-              varient === "secondary" &&
-                `text-theme-Teal-500 hover:bg-theme-Teal-500 group-[[id="active-link"]]:bg-theme-Teal-500`,
-              varient === "primary" &&
-                `text-theme-LightGray-400 hover:bg-theme-Brand group-[[id="active-link"]]:bg-theme-Brand`,
-              `peer grid place-content-center transition-all duration-200 ease-out h-12 w-12 rounded-3xl  hover:text-theme-White group-[[id="active-link"]]:text-theme-White hover:rounded-2xl group-[[id="active-link"]]:rounded-2xl bg-theme-DarkGray-800`
-            )}
+          <motion.div
+            onClick={() => {
+              setClicked((curr) => !curr);
+              setTimeout(() => setClicked(false), 1000);
+            }}
+            initial={{ y: 0 }}
+            animate={{
+              y: isClicked ? [0, 1, 0] : 0,
+            }}
+            transition={{ type: "tween", ease: "easeInOut" }}
           >
-            {children}
-          </div>
+            <div
+              className={classNames(
+                varient === "secondary" &&
+                  `text-theme-Teal-500 hover:bg-theme-Teal-500 group-[[id="active-link"]]:bg-theme-Teal-500`,
+                varient === "primary" &&
+                  `text-theme-LightGray-400 hover:bg-theme-Brand group-[[id="active-link"]]:bg-theme-Brand`,
+                `peer grid place-content-center transition-all duration-200 ease-out h-12 w-12 rounded-3xl  hover:text-theme-White group-[[id="active-link"]]:text-theme-White hover:rounded-2xl group-[[id="active-link"]]:rounded-2xl bg-theme-DarkGray-800`
+              )}
+            >
+              {children}
+            </div>
+          </motion.div>
         </ToolTip>
       </div>
     </>
