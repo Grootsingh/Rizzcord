@@ -43,8 +43,8 @@ function MusicHelperPopUp() {
           animate={LineTwoControl}
         >
           <p className="p-2">
-            You can use Keyboard Ctrl + M (on Windows) or Cmd + M (on MacOS) to
-            Play and Pause the Music
+            You can use Keyboard (Ctrl or Cmd) + Spacebar to Play and Pause the
+            Music
           </p>
         </motion.div>
       </motion.div>

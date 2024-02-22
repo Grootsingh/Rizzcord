@@ -13,7 +13,7 @@ function MediaPlayer() {
         (event.ctrlKey ||
           event.code === "MetaLeft" ||
           event.code === "MetaRight") &&
-        event.code === "KeyM"
+        event.code === "Space"
       ) {
         setIsPlaying((currentIsPlaying) => {
           return !currentIsPlaying;

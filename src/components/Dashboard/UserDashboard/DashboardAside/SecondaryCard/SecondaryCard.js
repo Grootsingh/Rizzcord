@@ -118,6 +118,7 @@ export default function SecondaryCard() {
                     onKeyDown={(event) => {
                       if (event.code === "Space") {
                         event.stopPropagation();
+                        event.preventDefault();
                       }
                     }}
                     onClick={() => {
