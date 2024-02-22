@@ -22,7 +22,7 @@ _Get a glimpse of Rizzcord's stunning UI._
 
 ## Experience it Live 🚀
 
-Don't just take our word for it—see Rizzcord in action yourself! Visit the live demo [Rizzcord](https://rizzcord-five.vercel.app/) and prepare to be amazed.
+Don't just take our word for it—see Rizzcord in action yourself! Visit the live demo <a href="https://rizzcord-five.vercel.app/" target="_blank">Rizzcord</a> and prepare to be amazed.
 
 ## Technologies Behind the Magic 🛠️
 
