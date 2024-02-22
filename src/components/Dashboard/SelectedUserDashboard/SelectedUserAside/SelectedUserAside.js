@@ -19,11 +19,6 @@ function SelectedUserAside() {
   const userProfileisOpen = useRecoilValue(showUserProfieState);
   const [isColor, setColor] = React.useState(null);
   const [isDate, setDate] = React.useState(null);
-  const defaultWidthValue = useMotionValue(340);
-
-  React.useEffect(() => {
-    defaultWidthValue.set(0);
-  }, []);
 
   const {
     username,
@@ -54,7 +49,7 @@ function SelectedUserAside() {
       layout={true}
       initial={{ width: 340 }}
       animate={{
-        width: userProfileisOpen ? 340 : defaultWidthValue.get(),
+        width: userProfileisOpen ? 340 : 0,
       }}
       transition={{
         delay: 0.2,

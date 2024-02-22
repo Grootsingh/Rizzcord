@@ -17,14 +17,6 @@ function IconButton({
   const [isSelected, setSelected] = useRecoilState(showUserProfieState);
 
   React.useEffect(() => {
-    if (text === "Show User Profile" && window.innerWidth > 1280) {
-      setSelected((curr) => !curr);
-    } else if (window.innerWidth <= 1280) {
-      setSelected(false);
-    }
-  }, [isOpen, text, setSelected]);
-
-  React.useEffect(() => {
     function handleResize() {
       if (window.innerWidth <= 1280) {
         setSelected(false);
@@ -59,6 +51,14 @@ function IconButton({
           setOpen((curr) => !curr);
           if (text === "Inbox") {
             FlipInBoxFn();
+          }
+          if (text === "Show User Profile" && window.innerWidth > 1280) {
+            setSelected((curr) => !curr);
+          } else if (
+            text === "Show User Profile" &&
+            window.innerWidth <= 1280
+          ) {
+            setSelected(false);
           }
         }}
         className={classNames(
