@@ -14,7 +14,7 @@ function FilterPopUp({ filterRef, isFilterOpen, filterCloseFn }) {
         static={true}
         as={motion.div}
         key="FilterPopUp"
-        className={"fixed "}
+        className={"fixed z-[2]"}
         initial={{
           clipPath: "circle(3.9% at 96% 5%)",
         }}
