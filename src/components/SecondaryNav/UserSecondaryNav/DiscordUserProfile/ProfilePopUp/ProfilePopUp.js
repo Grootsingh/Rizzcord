@@ -43,10 +43,10 @@ function ProfilePopUp({ isOpen, isCloseFn, ProfilePosition }) {
 
           transition: {
             clipPath: {
-              delay: 1,
+              delay: 0.8,
               type: "tween",
               ease: "circOut",
-              duration: 1,
+              duration: 0.8,
             },
             opacity: { delay: 0.5 },
           },
@@ -100,30 +100,35 @@ function ProfilePopUp({ isOpen, isCloseFn, ProfilePosition }) {
                 </div>
               </ToolTip>
             </Link>
-            <ToolTip direction={"Up"} text={"Give This Repo A Star"}>
-              <div
-                ref={RepoRef}
-                onMouseEnter={() => setIsVisible(true)}
-                onMouseLeave={() => setIsVisible(false)}
-                className="hover:scale-105 h-[30px] w-[30px] shadow-lg grid place-content-center p-1 bg-theme-LightGray-500  rounded-xl "
-              >
-                {isVisible ? (
-                  <FillStarIcon className="h-[22px] w-[22px] text-theme-Slate-300" />
-                ) : (
-                  <motion.div
-                    initial={{ scale: 1, opacity: 1 }}
-                    animate={{ scale: 0.5, opacity: 0.5 }}
-                    transition={{
-                      repeat: 15,
-                      repeatType: "mirror",
-                      duration: 1.5,
-                    }}
-                  >
-                    <HollowStarIcon className="h-[22px] w-[22px]" />
-                  </motion.div>
-                )}
-              </div>
-            </ToolTip>
+            <Link
+              href={"https://github.com/Grootsingh/Rizzcord"}
+              target="_blank"
+            >
+              <ToolTip direction={"Up"} text={"Give This Repo A Star"}>
+                <div
+                  ref={RepoRef}
+                  onMouseEnter={() => setIsVisible(true)}
+                  onMouseLeave={() => setIsVisible(false)}
+                  className="hover:scale-105 h-[30px] w-[30px] shadow-lg grid place-content-center p-1 bg-theme-LightGray-500  rounded-xl "
+                >
+                  {isVisible ? (
+                    <FillStarIcon className="h-[22px] w-[22px] text-theme-Slate-300" />
+                  ) : (
+                    <motion.div
+                      initial={{ scale: 1, opacity: 1 }}
+                      animate={{ scale: 0.5, opacity: 0.5 }}
+                      transition={{
+                        repeat: 15,
+                        repeatType: "mirror",
+                        duration: 1.5,
+                      }}
+                    >
+                      <HollowStarIcon className="h-[22px] w-[22px]" />
+                    </motion.div>
+                  )}
+                </div>
+              </ToolTip>
+            </Link>
           </div>
 
           <div className="p-4">
