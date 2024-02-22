@@ -162,6 +162,7 @@ function SelectedUserMain() {
             width={80}
             src={image}
             alt={username}
+            priority={true}
             as="image"
             style={{ filter: "drop-shadow(0 0 2px hsl(0deg 0% 0%/0.25))" }}
             className="h-[80px] w-[80px] rounded-full"

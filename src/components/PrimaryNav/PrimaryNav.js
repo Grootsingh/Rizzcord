@@ -1,17 +1,24 @@
+"use client";
 import React, { Suspense } from "react";
 import IconStyle from "./IconStyle";
 import { DiscordIcon, DiscoverIcon, PlusIcon, DownloadIcon } from "@/Icons";
 import MediaPlayer from "../MediaPlayer";
 import Link from "next/link";
+import { selectedBtn } from "../RootRecoilProvider/RecoilStates";
+import { useSetRecoilState } from "recoil";
 
 function PrimaryNav() {
+  const setIsSelectedBtn = useSetRecoilState(selectedBtn);
+
   return (
     <>
       <div className="z-10 shrink-0 w-[4.5rem] text-white flex gap-2 flex-col items-center pt-3 bg-theme-DarkGray-900">
         <Link href={""} id={"active-link"} className="group">
-          <IconStyle text="Direct Message" varient="primary">
-            <DiscordIcon className="w-[1.875rem] h-[1.875rem]" />
-          </IconStyle>
+          <div onClick={() => setIsSelectedBtn("Friends")}>
+            <IconStyle text="Direct Message" varient="primary">
+              <DiscordIcon className="w-[1.875rem] h-[1.875rem]" />
+            </IconStyle>
+          </div>
         </Link>
         <div className="h-[2px] w-8 bg-theme-Driftwood-grey rounded-full"></div>
         <Link href={""} className="group">

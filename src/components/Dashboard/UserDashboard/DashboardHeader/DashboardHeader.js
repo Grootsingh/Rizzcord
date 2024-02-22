@@ -1,7 +1,6 @@
-import { FriendIcon } from "@/Icons";
-
 import SubHeaderLeft from "./SubHeaderLeft";
 import SubHeaderRight from "./SubHeaderRight";
+import { FriendIcon } from "@/Icons";
 
 function DashboardHeader() {
   return (

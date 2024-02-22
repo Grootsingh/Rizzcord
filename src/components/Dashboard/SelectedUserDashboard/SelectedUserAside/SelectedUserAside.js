@@ -13,12 +13,17 @@ import Image from "next/image";
 import { addDays, format } from "date-fns";
 import { isVibrant } from "@/utils";
 import ToolTip from "@/components/ToolTip";
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 function SelectedUserAside() {
   const selectedUserName = useRecoilValue(selectedBtn);
   const userProfileisOpen = useRecoilValue(showUserProfieState);
   const [isColor, setColor] = React.useState(null);
   const [isDate, setDate] = React.useState(null);
+  const defaultWidthValue = useMotionValue(340);
+
+  React.useEffect(() => {
+    defaultWidthValue.set(0);
+  }, []);
 
   const {
     username,
@@ -49,7 +54,7 @@ function SelectedUserAside() {
       layout={true}
       initial={{ width: 340 }}
       animate={{
-        width: userProfileisOpen ? 340 : 0,
+        width: userProfileisOpen ? 340 : defaultWidthValue.get(),
       }}
       transition={{
         delay: 0.2,
@@ -75,6 +80,7 @@ function SelectedUserAside() {
             alt="profile-photo"
             height={80}
             width={80}
+            priority={true}
             className="rounded-full  h-[80px] w-[80px] outline outline-[6px] outline-theme-CharcoalGray-700"
           />
         </div>

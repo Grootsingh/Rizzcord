@@ -87,6 +87,7 @@ export default function SecondaryCard() {
                 alt={username}
                 height={100}
                 width={100}
+                priority={true}
                 className="w-[100px] h-[100px]"
               />
             </div>
