@@ -44,6 +44,7 @@ function UsersList() {
                   }}
                   className="isolate relative"
                   key={id}
+                  onClick={() => setIsSelected(username)}
                 >
                   {isSelected === username ? (
                     <motion.div
@@ -62,10 +63,7 @@ function UsersList() {
                         : "text-theme-SteelGray-500 hover:bg-theme-Driftwood-grey hover:text-theme-LightGray-400"
                     } group relative z-[1] cursor-pointer flex items-center  rounded  p-2`}
                   >
-                    <div
-                      onClick={() => setIsSelected(username)}
-                      className="flex items-center gap-3"
-                    >
+                    <div className="flex items-center gap-3">
                       <div className="relative ">
                         <div className="h-4 w-4 absolute bottom-[-3px] right-[-3px] rounded-full bg-theme-CharcoalGray-800 grid place-content-center">
                           <ToolTip text={statusText} direction={"Up"}>
