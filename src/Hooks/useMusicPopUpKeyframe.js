@@ -80,7 +80,7 @@ function useMusicPopUpKeyframe(LineOneRef, LineTwoRef) {
         },
       });
       ContainerControl.start({
-        y: "150%",
+        y: "175%",
 
         transition: {
           y: { type: "spring", stiffness: 60, damping: 10 },

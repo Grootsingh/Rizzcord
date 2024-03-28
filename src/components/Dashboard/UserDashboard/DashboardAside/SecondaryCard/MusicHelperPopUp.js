@@ -13,7 +13,7 @@ function MusicHelperPopUp() {
       <motion.div
         layout={true}
         initial={{
-          y: "150%",
+          y: "175%",
           height: 40,
           borderRadius: 20,
           width: 40,
@@ -22,7 +22,7 @@ function MusicHelperPopUp() {
         transition={{
           type: "spring",
         }}
-        exit={{ y: "150%" }}
+        exit={{ y: "175%" }}
         className="fixed font-medium overflow-hidden text-theme-Slate-400  flex flex-col shadow-xl  bottom-6 right-4 bg-theme-Slate-300"
       >
         <motion.div
